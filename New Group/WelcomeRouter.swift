@@ -14,10 +14,26 @@ import UIKit
 
 @objc protocol WelcomeRoutingLogic
 {
-  //func navigatetoLoginScene()
+    func navigateToLoginScene()
+    func navigateToSignUpScene()
 }
 
-class WelcomeRouter: NSObject, WelcomeRoutingLogic{
-  weak var viewController: WelcomeViewController?
-  
+class WelcomeRouter: WelcomeRoutingLogic{
+    weak var viewController : WelcomeViewController?
+    
+    //MARK: Actions & Outlets
+    
+    
+    
+    //MARK : Navigaiton
+    func navigateToSignUpScene() {
+        let SignVC = SignUpViewController.getInstance()
+        viewController?.navigationController?.pushViewController(SignVC, animated: true)
+    }
+    
+    func navigateToLoginScene() {
+        let loginVC = LoginViewController.getInstance()
+        viewController?.navigationController?.pushViewController(loginVC, animated: true)
+        
+    }
 }

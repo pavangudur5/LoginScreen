@@ -15,46 +15,18 @@ import UIKit
 @objc protocol SignUpRoutingLogic
 {
   //func routeToSomewhere(segue: UIStoryboardSegue?)
+    func navigatetoLoginScreen()
 }
 
-protocol SignUpDataPassing
-{
-  var dataStore: SignUpDataStore? { get }
-}
-
-class SignUpRouter: NSObject, SignUpRoutingLogic, SignUpDataPassing
-{
-  weak var viewController: SignUpViewController?
-  var dataStore: SignUpDataStore?
+class SignUpRouter: NSObject, SignUpRoutingLogic{
+    weak var viewController: SignUpViewController?
+    
+        //MARK : Navigaiton
+    
+    func navigatetoLoginScreen() {
+        let loginVC = LoginViewController.getInstance()
+        viewController?.navigationController?.pushViewController(loginVC, animated: true)
+    }
   
-  // MARK: Routing
   
-  //func routeToSomewhere(segue: UIStoryboardSegue?)
-  //{
-  //  if let segue = segue {
-  //    let destinationVC = segue.destination as! SomewhereViewController
-  //    var destinationDS = destinationVC.router!.dataStore!
-  //    passDataToSomewhere(source: dataStore!, destination: &destinationDS)
-  //  } else {
-  //    let storyboard = UIStoryboard(name: "Main", bundle: nil)
-  //    let destinationVC = storyboard.instantiateViewController(withIdentifier: "SomewhereViewController") as! SomewhereViewController
-  //    var destinationDS = destinationVC.router!.dataStore!
-  //    passDataToSomewhere(source: dataStore!, destination: &destinationDS)
-  //    navigateToSomewhere(source: viewController!, destination: destinationVC)
-  //  }
-  //}
-
-  // MARK: Navigation
-  
-  //func navigateToSomewhere(source: SignUpViewController, destination: SomewhereViewController)
-  //{
-  //  source.show(destination, sender: nil)
-  //}
-  
-  // MARK: Passing data
-  
-  //func passDataToSomewhere(source: SignUpDataStore, destination: inout SomewhereDataStore)
-  //{
-  //  destination.name = source.name
-  //}
 }

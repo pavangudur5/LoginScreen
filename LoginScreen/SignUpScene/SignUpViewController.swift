@@ -17,32 +17,31 @@ protocol SignUpDisplayLogic: class
 
 }
 
-class SignUpViewController: UIViewController, SignUpDisplayLogic
+class SignUpViewController: UIViewController, SignUpDisplayLogic, UIScrollViewDelegate
 {
-  var router: (NSObjectProtocol & SignUpRoutingLogic & SignUpDataPassing)?
+  var router: SignUpRouter?
 
   // MARK: Object lifecycle
   
-  override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?)
-  {
-    super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
-    setup()
-  }
-  
-  required init?(coder aDecoder: NSCoder)
-  {
-    super.init(coder: aDecoder)
-    setup()
-  }
-  
-  // MARK: Setup
+    //MARK: Outlets
+    
+    @IBAction func LoginButtonPressed(_ sender: Any) {
+        router?.navigatetoLoginScreen()
+    }
+    
+    @IBAction func NextButtonPressed(_ sender: UIBarButtonItem) {
+    }
+    
+  //MARK: Setup
   
   private func setup()
   {
     let viewController = self
-    let interactor = SignUpInteractor()
     let presenter = SignUpPresenter()
     let router = SignUpRouter()
+    viewController.router = router
+    presenter.viewController = viewController
+    router.viewController = viewController
   }
   
   // MARK: Routing
@@ -52,8 +51,15 @@ class SignUpViewController: UIViewController, SignUpDisplayLogic
   
   override func viewDidLoad()
   {
+    setup()
     super.viewDidLoad()
+    
   }
+    
+    static func getInstance() -> SignUpViewController {
+        let storyboard = UIStoryboard(name: SIGNUP_STORYBOARD_NAME, bundle: nil)
+        return (storyboard.instantiateViewController(withIdentifier: SIGNUP_STORYBOARD_ID)as! SignUpViewController)
+    }
   
   // MARK: Do something
   
