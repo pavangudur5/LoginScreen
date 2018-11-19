@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="dIn-eD-Ful">
+    <device id="retina5_9" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Welcome View Controller-->
+        <scene sceneID="AGE-YB-8dH">
+            <objects>
+                <viewController id="dIn-eD-Ful" customClass="WelcomeViewController" customModule="LoginScreen" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="H8R-gI-fh7">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="72q-fj-mnx">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="778"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Y6B-go-GAa">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="778"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Aob-gl-FEt">
+                                                <rect key="frame" x="120" y="562.66666666666663" width="136" height="47.333333333333371"/>
+                                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.42352941176470588" alpha="0.84999999999999998" colorSpace="calibratedRGB"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="Aob-gl-FEt" secondAttribute="height" multiplier="175:61" id="7gg-VK-6mO"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="26"/>
+                                                <state key="normal" title="SIGN UP">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="signUpButton:" destination="dIn-eD-Ful" eventType="touchUpInside" id="0gi-EI-NUA"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nuU-pI-eFN">
+                                                <rect key="frame" x="16" y="630" width="359" height="40"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="23"/>
+                                                <state key="normal" title="Login">
+                                                    <color key="titleColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="loginButtonPressed:" destination="dIn-eD-Ful" eventType="touchUpInside" id="DKC-T5-EmK"/>
+                                                </connections>
+                                            </button>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="fill" contentVerticalAlignment="fill" text="Welcome to Application" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ijC-gP-nCc">
+                                                <rect key="frame" x="8" y="292.66666666666669" width="359" height="30"/>
+                                                <color key="textColor" red="0.85889911167512689" green="0.85889911167512689" blue="0.85889911167512689" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="25"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                        </subviews>
+                                        <color key="backgroundColor" red="0.27058823529411763" green="0.792156862745098" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="trailing" secondItem="ijC-gP-nCc" secondAttribute="trailing" constant="8" id="24m-sA-A6R"/>
+                                            <constraint firstItem="nuU-pI-eFN" firstAttribute="leading" secondItem="Y6B-go-GAa" secondAttribute="leadingMargin" constant="8" id="FBN-MB-ZMP"/>
+                                            <constraint firstAttribute="trailing" secondItem="Aob-gl-FEt" secondAttribute="trailing" constant="119" id="PKf-Fr-g3V"/>
+                                            <constraint firstItem="Aob-gl-FEt" firstAttribute="leading" secondItem="Y6B-go-GAa" secondAttribute="leading" constant="120" id="Pbf-KN-GSl"/>
+                                            <constraint firstItem="Aob-gl-FEt" firstAttribute="top" secondItem="ijC-gP-nCc" secondAttribute="bottom" constant="240" id="Yg5-4d-WAT"/>
+                                            <constraint firstItem="ijC-gP-nCc" firstAttribute="leading" secondItem="Y6B-go-GAa" secondAttribute="leading" constant="8" id="alv-T2-RYE"/>
+                                            <constraint firstAttribute="bottomMargin" secondItem="nuU-pI-eFN" secondAttribute="bottom" constant="100" id="jzq-r9-Jgq"/>
+                                            <constraint firstItem="nuU-pI-eFN" firstAttribute="top" secondItem="Aob-gl-FEt" secondAttribute="bottom" constant="20" id="pXZ-IF-MZl"/>
+                                            <constraint firstItem="nuU-pI-eFN" firstAttribute="trailing" secondItem="Y6B-go-GAa" secondAttribute="trailingMargin" constant="8" id="s1x-1L-Isw"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="Y6B-go-GAa" secondAttribute="bottom" id="7Jc-xc-ymZ"/>
+                                    <constraint firstAttribute="trailing" secondItem="Y6B-go-GAa" secondAttribute="trailing" id="9tU-Bs-EXt"/>
+                                    <constraint firstItem="Y6B-go-GAa" firstAttribute="centerX" secondItem="72q-fj-mnx" secondAttribute="centerX" id="Mjz-QI-BQO"/>
+                                    <constraint firstItem="Y6B-go-GAa" firstAttribute="top" secondItem="72q-fj-mnx" secondAttribute="top" id="Yp4-oh-l0K"/>
+                                    <constraint firstItem="Y6B-go-GAa" firstAttribute="leading" secondItem="72q-fj-mnx" secondAttribute="leading" id="ZXe-MH-VRY"/>
+                                    <constraint firstItem="Y6B-go-GAa" firstAttribute="centerY" secondItem="72q-fj-mnx" secondAttribute="centerY" id="hTg-X8-NLR"/>
+                                </constraints>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.27058823529411763" green="0.792156862745098" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="72q-fj-mnx" firstAttribute="top" secondItem="H8R-gI-fh7" secondAttribute="top" id="HRx-78-sb3"/>
+                            <constraint firstItem="72q-fj-mnx" firstAttribute="trailing" secondItem="MoX-sa-bO3" secondAttribute="trailing" id="UEo-NX-gqN"/>
+                            <constraint firstItem="72q-fj-mnx" firstAttribute="leading" secondItem="MoX-sa-bO3" secondAttribute="leading" id="fy6-e3-GV9"/>
+                            <constraint firstItem="72q-fj-mnx" firstAttribute="bottom" secondItem="MoX-sa-bO3" secondAttribute="bottom" id="oHB-N7-3yH"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="MoX-sa-bO3"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="sSU-oZ-1ic" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-349.27536231884062" y="250.27173913043481"/>
+        </scene>
+    </scenes>
+</document>
