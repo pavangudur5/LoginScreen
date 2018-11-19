@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="dIn-eD-Ful">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="9eN-4m-CdK">
     <device id="retina5_9" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -12,7 +12,7 @@
         <!--Welcome View Controller-->
         <scene sceneID="AGE-YB-8dH">
             <objects>
-                <viewController id="dIn-eD-Ful" customClass="WelcomeViewController" customModule="LoginScreen" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="WelcomeViewContollerID" id="dIn-eD-Ful" customClass="WelcomeViewController" customModule="LoginScreen" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="H8R-gI-fh7">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -47,21 +47,19 @@
                                                     <action selector="loginButtonPressed:" destination="dIn-eD-Ful" eventType="touchUpInside" id="DKC-T5-EmK"/>
                                                 </connections>
                                             </button>
-                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="fill" contentVerticalAlignment="fill" text="Welcome to Application" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ijC-gP-nCc">
-                                                <rect key="frame" x="8" y="292.66666666666669" width="359" height="30"/>
-                                                <color key="textColor" red="0.85889911167512689" green="0.85889911167512689" blue="0.85889911167512689" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="25"/>
-                                                <textInputTraits key="textInputTraits"/>
-                                            </textField>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Welcome to Application" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3cQ-ye-yIc">
+                                                <rect key="frame" x="16" y="256" width="351" height="42"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="27"/>
+                                                <color key="textColor" red="0.8588991117" green="0.8588991117" blue="0.8588991117" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
                                         </subviews>
                                         <color key="backgroundColor" red="0.27058823529411763" green="0.792156862745098" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
-                                            <constraint firstAttribute="trailing" secondItem="ijC-gP-nCc" secondAttribute="trailing" constant="8" id="24m-sA-A6R"/>
                                             <constraint firstItem="nuU-pI-eFN" firstAttribute="leading" secondItem="Y6B-go-GAa" secondAttribute="leadingMargin" constant="8" id="FBN-MB-ZMP"/>
                                             <constraint firstAttribute="trailing" secondItem="Aob-gl-FEt" secondAttribute="trailing" constant="119" id="PKf-Fr-g3V"/>
                                             <constraint firstItem="Aob-gl-FEt" firstAttribute="leading" secondItem="Y6B-go-GAa" secondAttribute="leading" constant="120" id="Pbf-KN-GSl"/>
-                                            <constraint firstItem="Aob-gl-FEt" firstAttribute="top" secondItem="ijC-gP-nCc" secondAttribute="bottom" constant="240" id="Yg5-4d-WAT"/>
-                                            <constraint firstItem="ijC-gP-nCc" firstAttribute="leading" secondItem="Y6B-go-GAa" secondAttribute="leading" constant="8" id="alv-T2-RYE"/>
                                             <constraint firstAttribute="bottomMargin" secondItem="nuU-pI-eFN" secondAttribute="bottom" constant="100" id="jzq-r9-Jgq"/>
                                             <constraint firstItem="nuU-pI-eFN" firstAttribute="top" secondItem="Aob-gl-FEt" secondAttribute="bottom" constant="20" id="pXZ-IF-MZl"/>
                                             <constraint firstItem="nuU-pI-eFN" firstAttribute="trailing" secondItem="Y6B-go-GAa" secondAttribute="trailingMargin" constant="8" id="s1x-1L-Isw"/>
@@ -87,10 +85,32 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="MoX-sa-bO3"/>
                     </view>
+                    <navigationItem key="navigationItem" id="TyI-P8-ZcI"/>
+                    <connections>
+                        <outlet property="scrollView" destination="72q-fj-mnx" id="Llf-lp-rES"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sSU-oZ-1ic" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-349.27536231884062" y="250.27173913043481"/>
+            <point key="canvasLocation" x="592.79999999999995" y="249.7536945812808"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="5iT-Wp-X2U">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="9eN-4m-CdK" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Rgt-VX-TVF">
+                        <rect key="frame" x="0.0" y="44" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="dIn-eD-Ful" kind="relationship" relationship="rootViewController" id="ujp-n2-lcz"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Pf5-hg-1XZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-349.60000000000002" y="249.7536945812808"/>
         </scene>
     </scenes>
 </document>
