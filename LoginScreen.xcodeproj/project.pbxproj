@@ -42,6 +42,12 @@
 		AC4CA93521A317C500ECB9DF /* LoginPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC4CA93421A317C500ECB9DF /* LoginPresenter.swift */; };
 		AC4CA93721A317D300ECB9DF /* LoginRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC4CA93621A317D300ECB9DF /* LoginRouter.swift */; };
 		AC4CA93921A3220B00ECB9DF /* AppNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC4CA93821A3220B00ECB9DF /* AppNavigationController.swift */; };
+		AC4CA93E21A39B7F00ECB9DF /* SignUpUserName.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AC4CA93D21A39B7F00ECB9DF /* SignUpUserName.storyboard */; };
+		AC4CA94021A39B8D00ECB9DF /* SignUpUserNameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC4CA93F21A39B8C00ECB9DF /* SignUpUserNameViewController.swift */; };
+		AC4CA94221A39C7100ECB9DF /* SignUpPassword.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AC4CA94121A39C7100ECB9DF /* SignUpPassword.storyboard */; };
+		AC4CA94421A39C8E00ECB9DF /* SignUpPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC4CA94321A39C8E00ECB9DF /* SignUpPasswordViewController.swift */; };
+		AC4CA94621A3A18600ECB9DF /* SignUpUserNameRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC4CA94521A3A18600ECB9DF /* SignUpUserNameRouter.swift */; };
+		AC4CA94821A3A45000ECB9DF /* SignUpPasswordRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC4CA94721A3A45000ECB9DF /* SignUpPasswordRouter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -89,6 +95,12 @@
 		AC4CA93421A317C500ECB9DF /* LoginPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginPresenter.swift; sourceTree = "<group>"; };
 		AC4CA93621A317D300ECB9DF /* LoginRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginRouter.swift; sourceTree = "<group>"; };
 		AC4CA93821A3220B00ECB9DF /* AppNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppNavigationController.swift; sourceTree = "<group>"; };
+		AC4CA93D21A39B7F00ECB9DF /* SignUpUserName.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SignUpUserName.storyboard; sourceTree = "<group>"; };
+		AC4CA93F21A39B8C00ECB9DF /* SignUpUserNameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpUserNameViewController.swift; sourceTree = "<group>"; };
+		AC4CA94121A39C7100ECB9DF /* SignUpPassword.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SignUpPassword.storyboard; sourceTree = "<group>"; };
+		AC4CA94321A39C8E00ECB9DF /* SignUpPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpPasswordViewController.swift; sourceTree = "<group>"; };
+		AC4CA94521A3A18600ECB9DF /* SignUpUserNameRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpUserNameRouter.swift; sourceTree = "<group>"; };
+		AC4CA94721A3A45000ECB9DF /* SignUpPasswordRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpPasswordRouter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -140,7 +152,7 @@
 			isa = PBXGroup;
 			children = (
 				AC4CA92C21A3176200ECB9DF /* LoginScene */,
-				AC4CA90F21A28E4400ECB9DF /* SignUpScene */,
+				AC4CA90F21A28E4400ECB9DF /* SignUpFlow */,
 				AC4CA90721A2809100ECB9DF /* WelcomeScene */,
 				AC4CA90E21A2821700ECB9DF /* Shared */,
 				AC4CA8D921A22DDA00ECB9DF /* Info.plist */,
@@ -190,16 +202,14 @@
 			path = Shared;
 			sourceTree = "<group>";
 		};
-		AC4CA90F21A28E4400ECB9DF /* SignUpScene */ = {
+		AC4CA90F21A28E4400ECB9DF /* SignUpFlow */ = {
 			isa = PBXGroup;
 			children = (
-				AC4CA91021A28EA400ECB9DF /* SignUpViewController.swift */,
-				AC4CA91421A28EBD00ECB9DF /* SignUp.storyboard */,
-				AC4CA91C21A28FB700ECB9DF /* SignUpInteractor.swift */,
-				AC4CA92021A28FCC00ECB9DF /* SignUpPresenter.swift */,
-				AC4CA92421A28FD800ECB9DF /* SignUpRouter.swift */,
+				AC4CA93C21A39B4100ECB9DF /* SignUpPassword */,
+				AC4CA93B21A39B2D00ECB9DF /* SignUpUserName */,
+				AC4CA93A21A39B1A00ECB9DF /* SignUpFullName */,
 			);
-			path = SignUpScene;
+			path = SignUpFlow;
 			sourceTree = "<group>";
 		};
 		AC4CA92C21A3176200ECB9DF /* LoginScene */ = {
@@ -212,6 +222,38 @@
 				AC4CA93621A317D300ECB9DF /* LoginRouter.swift */,
 			);
 			path = LoginScene;
+			sourceTree = "<group>";
+		};
+		AC4CA93A21A39B1A00ECB9DF /* SignUpFullName */ = {
+			isa = PBXGroup;
+			children = (
+				AC4CA91021A28EA400ECB9DF /* SignUpViewController.swift */,
+				AC4CA91421A28EBD00ECB9DF /* SignUp.storyboard */,
+				AC4CA91C21A28FB700ECB9DF /* SignUpInteractor.swift */,
+				AC4CA92021A28FCC00ECB9DF /* SignUpPresenter.swift */,
+				AC4CA92421A28FD800ECB9DF /* SignUpRouter.swift */,
+			);
+			path = SignUpFullName;
+			sourceTree = "<group>";
+		};
+		AC4CA93B21A39B2D00ECB9DF /* SignUpUserName */ = {
+			isa = PBXGroup;
+			children = (
+				AC4CA93D21A39B7F00ECB9DF /* SignUpUserName.storyboard */,
+				AC4CA93F21A39B8C00ECB9DF /* SignUpUserNameViewController.swift */,
+				AC4CA94521A3A18600ECB9DF /* SignUpUserNameRouter.swift */,
+			);
+			path = SignUpUserName;
+			sourceTree = "<group>";
+		};
+		AC4CA93C21A39B4100ECB9DF /* SignUpPassword */ = {
+			isa = PBXGroup;
+			children = (
+				AC4CA94121A39C7100ECB9DF /* SignUpPassword.storyboard */,
+				AC4CA94321A39C8E00ECB9DF /* SignUpPasswordViewController.swift */,
+				AC4CA94721A3A45000ECB9DF /* SignUpPasswordRouter.swift */,
+			);
+			path = SignUpPassword;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -318,10 +360,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AC4CA94221A39C7100ECB9DF /* SignUpPassword.storyboard in Resources */,
 				AC4CA92E21A3178300ECB9DF /* LoginScene.storyboard in Resources */,
 				AC4CA8D821A22DDA00ECB9DF /* LaunchScreen.storyboard in Resources */,
 				AC4CA91521A28EBD00ECB9DF /* SignUp.storyboard in Resources */,
 				AC4CA90921A280F100ECB9DF /* Welcome.storyboard in Resources */,
+				AC4CA93E21A39B7F00ECB9DF /* SignUpUserName.storyboard in Resources */,
 				AC4CA8D521A22DDA00ECB9DF /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -357,9 +401,13 @@
 				AC4CA91121A28EA400ECB9DF /* SignUpViewController.swift in Sources */,
 				AC4CA92521A28FD800ECB9DF /* SignUpRouter.swift in Sources */,
 				AC4CA93921A3220B00ECB9DF /* AppNavigationController.swift in Sources */,
+				AC4CA94621A3A18600ECB9DF /* SignUpUserNameRouter.swift in Sources */,
+				AC4CA94821A3A45000ECB9DF /* SignUpPasswordRouter.swift in Sources */,
 				AC4CA90B21A281A200ECB9DF /* WelcomeViewController.swift in Sources */,
+				AC4CA94421A39C8E00ECB9DF /* SignUpPasswordViewController.swift in Sources */,
 				AC4CA8CE21A22DD900ECB9DF /* AppDelegate.swift in Sources */,
 				AC4CA91D21A28FB700ECB9DF /* SignUpInteractor.swift in Sources */,
+				AC4CA94021A39B8D00ECB9DF /* SignUpUserNameViewController.swift in Sources */,
 				AC4CA93021A3179100ECB9DF /* LoginViewController.swift in Sources */,
 				AC4CA93721A317D300ECB9DF /* LoginRouter.swift in Sources */,
 				AC4CA91921A28F1D00ECB9DF /* WelcomeRouter.swift in Sources */,

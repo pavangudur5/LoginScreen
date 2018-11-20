@@ -116,6 +116,8 @@
                     </navigationItem>
                     <connections>
                         <outlet property="BackgroundScrollView" destination="JsR-QA-vZE" id="E8s-Hu-DfO"/>
+                        <outlet property="passwordTextField" destination="QwN-Qn-LYd" id="sVn-BB-K40"/>
+                        <outlet property="usernameTextField" destination="WhL-go-0ZQ" id="4Fc-R7-kem"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nAx-2G-6eT" userLabel="First Responder" sceneMemberID="firstResponder"/>

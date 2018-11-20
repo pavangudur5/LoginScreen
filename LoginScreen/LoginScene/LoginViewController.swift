@@ -31,6 +31,10 @@ class LoginViewController: UIViewController, LoginDisplayLogic, UIScrollViewDele
     @IBAction func SignUpButtonPressed(_ sender: UIButton) {
         router?.navigateToSignUp()
     }
+    @IBOutlet weak var usernameTextField: UITextField!
+    
+    @IBOutlet weak var passwordTextField: UITextField!
+    
     
     // MARK: Setup
   
@@ -52,6 +56,7 @@ class LoginViewController: UIViewController, LoginDisplayLogic, UIScrollViewDele
     setup()
     super.viewDidLoad()
     BackgroundScrollView.delegate = self
+    usernameTextField.becomeFirstResponder()
   }
 
     static func getInstance() -> LoginViewController {

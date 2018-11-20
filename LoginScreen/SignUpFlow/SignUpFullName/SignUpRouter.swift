@@ -28,5 +28,9 @@ class SignUpRouter: NSObject, SignUpRoutingLogic{
         viewController?.navigationController?.pushViewController(loginVC, animated: true)
     }
   
-  
+    func navigatetoUserNameScreen() {
+        let signUPVC = SignUpUserNameViewController.getInstance()
+        viewController?.navigationController?.pushViewController(signUPVC, animated: true)
+    }
+    
 }

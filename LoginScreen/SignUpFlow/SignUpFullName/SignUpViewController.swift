@@ -30,7 +30,11 @@ class SignUpViewController: UIViewController, SignUpDisplayLogic, UIScrollViewDe
     }
     
     @IBAction func NextButtonPressed(_ sender: UIBarButtonItem) {
+        router?.navigatetoUserNameScreen()
     }
+    @IBOutlet weak var firstnameTextField: UITextField!
+    
+    @IBOutlet weak var lastnameTextField: UITextField!
     
   //MARK: Setup
   
@@ -53,7 +57,7 @@ class SignUpViewController: UIViewController, SignUpDisplayLogic, UIScrollViewDe
   {
     setup()
     super.viewDidLoad()
-    
+    firstnameTextField.becomeFirstResponder()
   }
     
     static func getInstance() -> SignUpViewController {
