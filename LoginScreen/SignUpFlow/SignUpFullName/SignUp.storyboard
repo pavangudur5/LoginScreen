@@ -60,7 +60,7 @@
                                                         <rect key="frame" x="0.0" y="237.5" width="359" height="30"/>
                                                         <nil key="textColor"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                        <textInputTraits key="textInputTraits"/>
+                                                        <textInputTraits key="textInputTraits" returnKeyType="next"/>
                                                     </textField>
                                                 </subviews>
                                                 <constraints>
@@ -117,6 +117,10 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="firstnameTextField" destination="fxW-Yl-ntT" id="3T0-uG-xZv"/>
+                        <outlet property="lastnameTextField" destination="ajj-sW-dWh" id="vgj-uE-OKH"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="leT-E2-qsO" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

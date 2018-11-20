@@ -23,4 +23,7 @@ let LOGIN_STORYBOARD_ID = "LoginViewControllerID"
 
 let SIGNUP_STORYBOARD_NAME = "SignUp"
 let SIGNUP_STORYBOARD_ID = "SignUpViewControllerID"
-
+let SIGNUP_USERNAME_STORYBOARD_NAME = "SignUpUserName"
+let SIGNUP_USERNAME_STORYBOARD_ID = "SignUpUserNameViewControllerID"
+let SIGNUP_PASSWORD_NAME = "SignUpPassword"
+let SIGNUP_PASSWORD_STORYBOARD_ID = "SignUpPasswordViewControllerID"
