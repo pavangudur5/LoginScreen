@@ -17,7 +17,7 @@ protocol SignUpDisplayLogic: class
 
 }
 
-class SignUpViewController: UIViewController, SignUpDisplayLogic, UIScrollViewDelegate
+class SignUpViewController: UIViewController, SignUpDisplayLogic, UIScrollViewDelegate, UINavigationControllerDelegate
 {
   var router: SignUpRouter?
 
@@ -53,12 +53,20 @@ class SignUpViewController: UIViewController, SignUpDisplayLogic, UIScrollViewDe
   
   // MARK: View lifecycle
   
-  override func viewDidLoad()
-  {
-    setup()
-    super.viewDidLoad()
-    firstnameTextField.becomeFirstResponder()
-  }
+    override func viewDidLoad()
+    {
+      setup()
+      super.viewDidLoad()
+      firstnameTextField.becomeFirstResponder()
+      self.navigationController?.navigationBar.isHidden = false
+    }
+  
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+    }
     
     static func getInstance() -> SignUpViewController {
         let storyboard = UIStoryboard(name: SIGNUP_STORYBOARD_NAME, bundle: nil)

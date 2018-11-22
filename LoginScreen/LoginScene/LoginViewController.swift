@@ -57,7 +57,12 @@ class LoginViewController: UIViewController, LoginDisplayLogic, UIScrollViewDele
     super.viewDidLoad()
     BackgroundScrollView.delegate = self
     usernameTextField.becomeFirstResponder()
+    self.navigationController?.navigationBar.isHidden = false
   }
+    
+//    func viewWillDisappear(_ animated: Bool) {
+//        self
+//    }
 
     static func getInstance() -> LoginViewController {
         let storyboard = UIStoryboard(name: LOGIN_STORYBOARD_NAME, bundle: nil)
