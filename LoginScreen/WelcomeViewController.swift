@@ -39,7 +39,7 @@ class WelcomeViewController: UIViewController, UIScrollViewDelegate {
         super.viewDidLoad()
         setup()
         scrollView.delegate = self
-        self.navigationController?.navigationBar.isHidden = true
+        self.navigationController?.navigationBar.backgroundColor = .clear
         }
     
     static func getInstance() -> WelcomeViewController {
