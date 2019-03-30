@@ -26,6 +26,7 @@ class LoginViewController: UIViewController, LoginDisplayLogic, UIScrollViewDele
     @IBOutlet weak var BackgroundScrollView: UIScrollView!
     
     @IBAction func LoginButtonPressed(_ sender: UIBarButtonItem) {
+        isTextFiledFille()
     }
     
     @IBAction func SignUpButtonPressed(_ sender: UIButton) {
@@ -35,6 +36,7 @@ class LoginViewController: UIViewController, LoginDisplayLogic, UIScrollViewDele
     
     @IBOutlet weak var passwordTextField: UITextField!
     
+    @IBOutlet weak var login: UIBarButtonItem!
     
     // MARK: Setup
   
@@ -67,6 +69,15 @@ class LoginViewController: UIViewController, LoginDisplayLogic, UIScrollViewDele
     static func getInstance() -> LoginViewController {
         let storyboard = UIStoryboard(name: LOGIN_STORYBOARD_NAME, bundle: nil)
         return (storyboard.instantiateViewController(withIdentifier: LOGIN_STORYBOARD_ID) as! LoginViewController)
+    }
+    
+    func isTextFiledFille() {
+        if ((usernameTextField.text?.isEmpty)! || (passwordTextField.text?.isEmpty)!) {
+            login.isEnabled = false
+        }
+        else {
+            login.isEnabled = true
+        }
     }
 
 }
