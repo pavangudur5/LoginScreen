@@ -116,6 +116,7 @@
                     </navigationItem>
                     <connections>
                         <outlet property="BackgroundScrollView" destination="JsR-QA-vZE" id="E8s-Hu-DfO"/>
+                        <outlet property="login" destination="fwb-SH-nJ0" id="lzj-G2-8fZ"/>
                         <outlet property="passwordTextField" destination="QwN-Qn-LYd" id="sVn-BB-K40"/>
                         <outlet property="usernameTextField" destination="WhL-go-0ZQ" id="4Fc-R7-kem"/>
                     </connections>

@@ -49,6 +49,7 @@
 		AC4CA94421A39C8E00ECB9DF /* SignUpPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC4CA94321A39C8E00ECB9DF /* SignUpPasswordViewController.swift */; };
 		AC4CA94621A3A18600ECB9DF /* SignUpUserNameRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC4CA94521A3A18600ECB9DF /* SignUpUserNameRouter.swift */; };
 		AC4CA94821A3A45000ECB9DF /* SignUpPasswordRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC4CA94721A3A45000ECB9DF /* SignUpPasswordRouter.swift */; };
+		AC88E7D5224EED7900958256 /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC88E7D4224EED7900958256 /* UIColorExtension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -103,6 +104,7 @@
 		AC4CA94321A39C8E00ECB9DF /* SignUpPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpPasswordViewController.swift; sourceTree = "<group>"; };
 		AC4CA94521A3A18600ECB9DF /* SignUpUserNameRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpUserNameRouter.swift; sourceTree = "<group>"; };
 		AC4CA94721A3A45000ECB9DF /* SignUpPasswordRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpPasswordRouter.swift; sourceTree = "<group>"; };
+		AC88E7D4224EED7900958256 /* UIColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColorExtension.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -201,6 +203,7 @@
 				AC4CA92A21A315C500ECB9DF /* GlobalConstants.swift */,
 				AC4CA93821A3220B00ECB9DF /* AppNavigationController.swift */,
 				AC08668321A64D7900F51D31 /* Navigation.swift */,
+				AC88E7D4224EED7900958256 /* UIColorExtension.swift */,
 			);
 			path = Shared;
 			sourceTree = "<group>";
@@ -403,6 +406,7 @@
 				AC4CA92921A3141200ECB9DF /* WelcomeInteractor.swift in Sources */,
 				AC4CA91121A28EA400ECB9DF /* SignUpViewController.swift in Sources */,
 				AC4CA92521A28FD800ECB9DF /* SignUpRouter.swift in Sources */,
+				AC88E7D5224EED7900958256 /* UIColorExtension.swift in Sources */,
 				AC4CA93921A3220B00ECB9DF /* AppNavigationController.swift in Sources */,
 				AC4CA94621A3A18600ECB9DF /* SignUpUserNameRouter.swift in Sources */,
 				AC08668421A64D7900F51D31 /* Navigation.swift in Sources */,
